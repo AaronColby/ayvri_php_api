@@ -4,6 +4,11 @@ require_once  "./ayvri_lib.php";
 //For detailed failures check your PHP default error log, common errors are when activities fail to load and therefore doesn't supply a valid
 //activity id for the scene.  Also be aware of subsequent runs without updating the scene name.
 
+//The other issue I had running this locally was not having a keystore setup for my PHP library, the error was as follows:
+//>Ayvri::doCurl: Curl Error: SSL certificate problem: unable to get local issuer certificate
+//following just steps 1 and 2 here fixed it for me:
+//https://stackoverflow.com/a/32095378
+
 $CLIENT_ID = "";
 $ACCOUNT_ID = "";
 $PASSWORD = "";
